@@ -161,5 +161,23 @@ namespace GameLibraryWinUI
             // Set the selected item of the GameList to the item that was right-clicked on
             GameList.SelectedItem = (e.OriginalSource as FrameworkElement)?.DataContext;
         }
+
+        private async void AboutButton_Click(object sender, RoutedEventArgs e)
+        {
+            var aboutDialog = new AboutDialog();
+
+            ContentDialog dialog = new()
+            {
+                // XamlRoot must be set in the case of a ContentDialog running in a Desktop app
+                XamlRoot = this.Content.XamlRoot,
+                Style = Application.Current.Resources["DefaultContentDialogStyle"] as Style,
+                Title = "About this app",
+                CloseButtonText = "Close",
+                DefaultButton = ContentDialogButton.Close,
+                Content = aboutDialog
+            };
+
+            await dialog.ShowAsync();
+        }
     }
 }

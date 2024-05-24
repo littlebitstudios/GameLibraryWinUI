@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <UserControl
-    x:Class="GameLibraryWinUI.EditDialog"
+    x:Class="GameLibraryWinUI.AboutDialog"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:GameLibraryWinUI"
@@ -15,7 +15,7 @@
             <TextBlock Text="GameLibraryWinUI v1.0" TextWrapping="Wrap" Margin="0,12,0,12"/>
             <TextBlock Text="Written by LittleBit" TextWrapping="Wrap" Margin="0,12,0,12"/>
             <TextBlock Text="Based on my original GameLibrary" TextWrapping="Wrap" Margin="0,12,0,12"/>
-            <TextBlock Text="https://github.com/littlebitstudios/GameLibraryWinUI" TextWrapping="Wrap" Margin="0,12,0,12"/>
+            <HyperlinkButton Content="View the project on GitHub" NavigateUri="https://github.com/littlebitstudios/GameLibraryWinUI" />
         </StackPanel>
     </Grid>
 </UserControl>

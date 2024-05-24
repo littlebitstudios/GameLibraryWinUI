@@ -16,7 +16,7 @@
 
   <Properties>
     <DisplayName>GameLibraryWinUI</DisplayName>
-    <PublisherDisplayName>jaher</PublisherDisplayName>
+    <PublisherDisplayName>LittleBit</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -34,8 +34,8 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="$targetentrypoint$">
       <uap:VisualElements
-        DisplayName="GameLibraryWinUI"
-        Description="GameLibraryWinUI"
+        DisplayName="LittleBit&apos;s Game Library"
+        Description="Software for cataloging games, for fun!"
         BackgroundColor="transparent"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png">

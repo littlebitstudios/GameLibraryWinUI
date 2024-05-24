@@ -21,9 +21,9 @@ namespace GameLibraryWinUI
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class EditDialog : UserControl
+    public sealed partial class AboutDialog : UserControl
     {
-        public EditDialog()
+        public AboutDialog()
         {
             this.InitializeComponent();
         }
