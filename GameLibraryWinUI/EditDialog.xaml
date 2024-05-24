@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UserControl
+    x:Class="GameLibraryWinUI.EditDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GameLibraryWinUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <!-- Content body -->
+            <TextBlock Text="Name" TextWrapping="Wrap" Margin="0,16,0,12"/>
+            <TextBox x:FieldModifier="public" x:Name="NameInput"></TextBox>
+            <TextBlock Text="Developer" TextWrapping="Wrap" Margin="0,16,0,12"/>
+            <TextBox x:FieldModifier="public" x:Name="DevInput"></TextBox>
+            <TextBlock Text="Description" TextWrapping="Wrap" Margin="0,16,0,12"/>
+            <TextBox x:FieldModifier="public" x:Name="DescInput"></TextBox>
+            <TextBlock Text="Genre" TextWrapping="Wrap" Margin="0,16,0,12"/>
+            <TextBox x:FieldModifier="public" x:Name="GenreInput"></TextBox>
+            <TextBlock Text="File Name (*.yaml)" TextWrapping="Wrap" Margin="0,16,0,12"/>
+            <TextBox x:FieldModifier="public" x:Name="FileNameInput"></TextBox>
+        </StackPanel>
+    </Grid>
+</UserControl>

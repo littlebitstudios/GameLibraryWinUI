@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="GameLibraryWinUI.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GameLibraryWinUI"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    
+    <StackPanel Orientation="Vertical">
+        <Border x:Name="AppTitleBar" Grid.Column="1" VerticalAlignment="Top">
+            <TextBlock x:Name="AppTitle" Text="LittleBit's Game Library" VerticalAlignment="Top" Margin="15,8,0,0" />
+        </Border>
+
+        <CommandBar Background="Transparent" IsOpen="False" DefaultLabelPosition="Right" HorizontalAlignment="Stretch">
+            <AppBarButton Icon="Add" Label="New game" Click="NewButton_Click"/>
+            <AppBarButton Icon="Refresh" Label="Reload game list" Click="ReloadButton_Click"/>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Icon="Help" Label="About"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+
+        <ListView x:Name="GameList" HorizontalAlignment="Stretch" RightTapped="GameList_RightTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:Game">
+                    <StackPanel Margin="0,10,0,10" Grid.Column="1" Orientation="Vertical">
+                        <StackPanel.ContextFlyout>
+                            <MenuFlyout>
+                                <MenuFlyoutItem Text="Edit" Click="GameEditButton_Click"/>
+                                <MenuFlyoutItem Text="Delete" Click="DeleteGameButton_Click"/>
+                            </MenuFlyout>
+                        </StackPanel.ContextFlyout>
+                        <TextBlock Text="{x:Bind name}" FontSize="14" FontWeight="SemiBold" Style="{ThemeResource BaseTextBlockStyle}" Margin="0,0,0,6" LineHeight="20" HorizontalAlignment="Left"/>
+                        <TextBlock Text="{x:Bind description}" FontFamily="Segoe UI" FontWeight="Normal" Style="{ThemeResource BodyTextBlockStyle}" HorizontalAlignment="Left"/>
+                        <StackPanel Orientation="Horizontal" Margin="0,5,5,0">
+                            <TextBlock Text="Genre: " HorizontalAlignment="Left" Style="{ThemeResource CaptionTextBlockStyle}"/>
+                            <TextBlock Text="{x:Bind genre}" HorizontalAlignment="Left" Style="{ThemeResource CaptionTextBlockStyle}" Margin="3,0,0,0"/>
+                            <TextBlock Text=" ⋅ " Style="{ThemeResource CaptionTextBlockStyle}" HorizontalAlignment="Left"/>
+                            <TextBlock Text="Developed by " HorizontalAlignment="Left" Style="{ThemeResource CaptionTextBlockStyle}"/>
+                            <TextBlock Text="{x:Bind developer}" HorizontalAlignment="Left" Style="{ThemeResource CaptionTextBlockStyle}" Margin="2,0,0,0"/>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackPanel>
+</Window>

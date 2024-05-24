@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "GameLibraryWinUI (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "GameLibraryWinUI (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
