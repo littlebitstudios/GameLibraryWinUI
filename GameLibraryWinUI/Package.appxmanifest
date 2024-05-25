@@ -8,14 +8,14 @@
   IgnorableNamespaces="uap rescap">
 
   <Identity
-    Name="630b736d-0562-4e3b-b5ff-9f8c4dfbd559"
-    Publisher="CN=jaher"
+    Name="com.littlebitstudios.GameLibraryWinUI"
+    Publisher="CN=LittleBit Studios"
     Version="1.0.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="630b736d-0562-4e3b-b5ff-9f8c4dfbd559" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>GameLibraryWinUI</DisplayName>
+    <DisplayName>LittleBit&apos;s Game Library</DisplayName>
     <PublisherDisplayName>LittleBit Studios</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -39,7 +39,7 @@
         BackgroundColor="transparent"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" />
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"  Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
     </Application>

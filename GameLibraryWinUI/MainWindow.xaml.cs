@@ -118,10 +118,9 @@ namespace GameLibraryWinUI
 
             ContentDialog dialog = new()
             {
-                // XamlRoot must be set in the case of a ContentDialog running in a Desktop app
                 XamlRoot = this.Content.XamlRoot,
                 Style = Application.Current.Resources["DefaultContentDialogStyle"] as Style,
-                Title = "New Game",
+                Title = "Edit Game",
                 PrimaryButtonText = "Save",
                 CloseButtonText = "Cancel",
                 DefaultButton = ContentDialogButton.Primary,
@@ -141,15 +140,6 @@ namespace GameLibraryWinUI
                 string documentsFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                 Game game = new Game(editdialog.NameInput.Text, editdialog.DevInput.Text, editdialog.DescInput.Text, editdialog.GenreInput.Text, editdialog.FileNameInput.Text);
                 Serializer serializer = new Serializer();
-                if (game.filename.EndsWith(".yaml") == false)
-                {
-                    game.filename = game.filename + ".yaml";
-                }
-
-                if (game.filename.StartsWith($"{documentsFolder}\\LittleBitGameLibrary\\Games") == false)
-                {
-                    game.filename = $"{documentsFolder}\\LittleBitGameLibrary\\Games\\" + game.filename;
-                }
 
                 System.IO.File.WriteAllText(game.filename, serializer.Serialize(game));
                 ReloadGameList();

@@ -37,9 +37,9 @@
                         <StackPanel Orientation="Horizontal" Margin="0,5,5,0">
                             <TextBlock Text="Genre: " HorizontalAlignment="Left" Style="{ThemeResource CaptionTextBlockStyle}"/>
                             <TextBlock Text="{x:Bind genre}" HorizontalAlignment="Left" Style="{ThemeResource CaptionTextBlockStyle}" Margin="3,0,0,0"/>
-                            <TextBlock Text=" ⋅ " Style="{ThemeResource CaptionTextBlockStyle}" HorizontalAlignment="Left"/>
+                            <TextBlock Text=" ⋅ " Style="{ThemeResource CaptionTextBlockStyle}" HorizontalAlignment="Left" Margin="0,0,3,0"/>
                             <TextBlock Text="Developed by " HorizontalAlignment="Left" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                            <TextBlock Text="{x:Bind developer}" HorizontalAlignment="Left" Style="{ThemeResource CaptionTextBlockStyle}" Margin="2,0,0,0"/>
+                            <TextBlock Text="{x:Bind developer}" HorizontalAlignment="Left" Style="{ThemeResource CaptionTextBlockStyle}" Margin="3,0,0,0"/>
                         </StackPanel>
                     </StackPanel>
                 </DataTemplate>
